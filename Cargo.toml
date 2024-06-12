@@ -1,0 +1,24 @@
+[package]
+name = "totaldim"
+version = "0.1.0"
+description = "simple Windows app that send Dim OSC message when mute key was pressed for TotalMix"
+authors = ["Sorah Fukumori <her@sorah.jp>"]
+homepage = "https://github.com/sorah/totaldim"
+repository = "https://github.com/sorah/totaldim"
+edition = "2021"
+license = "MIT"
+build = "build.rs"
+
+[dependencies]
+global-hotkey = "0.5.4"
+image = { version = "0.25.1", default-features = false, features = ["png"] }
+rosc = "0.10.1"
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+tray-icon = "0.14.3"
+win_etw_provider = "0.1.9"
+win_etw_tracing = "0.1.1"
+winit = "0.30.1"
+
+[build-dependencies]
+winres = "0.1.12"
